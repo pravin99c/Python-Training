@@ -70,3 +70,80 @@
 | list | sorting list (without using sorting fun) |
 
 ## Development
+
+
+
+
+# Introduction to python
+## 6. Create a function to reverse the entire list without any function and also do not use any indexing or slicing shortcut. Time Complexity O(logn)
+
+## Input:
+    list=[1,2,3,4,5,6,7,8,9]
+## Output :
+   list=[9, 8, 7, 6, 5, 4, 3, 2, 1]
+# testcases
+
+| Input | Output |
+| ------ | ------ |
+| list1 | True |
+
+## Development
+
+
+
+## 7. Convert any lower case string to upper case without in-built python functions.
+
+## Input:
+    A = "abcdef ghi"
+## Output :
+    A= ABCDEF GHI
+# testcases
+
+| Input | Output |
+| ------ | ------ |
+| String | Uppercase |
+
+## 8. Return the sum of duplicates elements from the given List
+
+## Input:
+   L = [3, 5, 6, 11, 12, 3, 5, 2]
+
+## Output :
+    sum=L = 8
+# testcases
+
+| Input | Output |
+| ------ | ------ |
+| list| 3+5=8 |
+
+
+
+## 9. Count the subsequence “AG” in the given string.
+
+## Input:
+    S = "BCAHGBNAJAKGTYUALKWGG"
+
+## Output :
+    ans=8
+# testcases
+
+| Input | Output |
+| ------ | ------ |
+| string | True |
+
+## 10. Find the max sum of sub array
+
+
+## Input:
+   L = [6, 3, -2, -1, -4, -2, -3, 7, 9, 8]
+## Output :
+   ans=49
+# testcases
+
+| Input | Output |
+| ------ | ------ |
+| list | sum max sub value |
+
+## Development
+
+
