@@ -137,7 +137,7 @@
 ## Input:
    L = [6, 3, -2, -1, -4, -2, -3, 7, 9, 8]
 ## Output :
-   ans=49
+   ans=24
 # testcases
 
 | Input | Output |
