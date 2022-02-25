@@ -14,4 +14,4 @@ dic2={57, 83, 29, 67, 73, 43, 48}
 # dic1-=d
 # print(d,",",dic1)
 
-print( dic1&dic2, ",",dic1-dic2 )
+print( dic1 & dic2, ",",dic1-dic2 )

@@ -146,4 +146,95 @@
 
 ## Development
 
+## 11. Return product of minimum of odd and maximum of even from a given list.
 
+
+## Input:
+   L =  [7, 5,  2, 3, 12, 9, 15, 24]
+## Output :
+   ans= 72
+# testcases
+
+| Input | Output |
+| ------ | ------ |
+| list | maximum even numer + minimum odd number |
+
+## Development
+
+
+
+## 12. Create a simulation program for Hot Potato Game.
+
+
+## Input:
+   list_name = ['Pravin','Aksh','Prachi','Kshitij','Komal']
+## Output :
+**********         Strat Hot Potato Game               **********
+*******  List_of_player :  ['Pravin', 'Aksh', 'Prachi', 'Kshitij', 'Komal']  ********
+
+
+**********      Out Of Game =  Aksh       **********
+
+
+
+**********      Out Of Game =  Pravin       **********
+
+
+
+**********      Out Of Game =  Prachi       **********
+
+
+
+**********      Out Of Game =  Komal       **********
+
+
+
+**********     Winner Player =  Kshitij       **********
+
+
+
+**********         End Hot Potato Game                           **********
+
+
+# testcases
+
+| Input | Output |
+| ------ | ------ |
+| list | winner find |
+
+## Development
+
+
+
+## 13. Find the max sum of sub array
+
+
+## Input:
+   L = [5, 17, 2, 6, 3]
+## Output :
+   ans= [17, 6, 3]
+# testcases
+
+| Input | Output |
+| ------ | ------ |
+| list | Max value than right side |
+
+## Development
+
+
+
+
+## 14. Add 1 to given list elements. Do not use string conversion.
+
+
+## Input:
+   L = [1, 2, 3]
+## Output :
+   ans= [1, 2, 4]
+# testcases
+
+| Input | Output |
+| ------ | ------ |
+| list | sum + 1 |
+
+## Development
