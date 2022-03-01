@@ -238,3 +238,88 @@
 | list | sum + 1 |
 
 ## Development
+
+
+
+## 15.  Calculate the sum of the major and minor diagonals of the given matrix.
+
+## Input:
+   A = [[2, 0, 7],
+       [4, 1, 9,],
+       [8, 1, -1,], 
+     ]
+
+## Output :
+    ans=2,16
+# testcases
+
+| Input | Output |
+| ------ | ------ |
+| list | 2,16 |
+
+## 16. Find the elements of the given list which are exactly the same as the entire product of the list except itself
+
+
+## Input:
+  A = [1, 5, 1, 10, 50]
+## Output :
+   ans=50
+# testcases
+
+| Input | Output |
+| ------ | ------ |
+| list | 50 |
+
+## Development
+
+## 17. Print reverse string using recursion
+
+## Input:
+   A = "helloworld"
+## Output :
+   ans= reverse string 
+# testcases
+
+| Input | Output |
+| ------ | ------ |
+| "helloworld" | dlrowolleh |
+
+## Development
+
+
+
+## 18. Find the majority element of the given list. Majority element: count of the elements > N/2
+
+
+## Input:
+   A = [5, 2, 3, 5, 1, 5, 1, 2, 5, 5, 5]
+## Output :
+   ans=5
+# testcases
+
+| Input | Output |
+| ------ | ------ |
+| list | 5 |
+
+## Development
+
+
+
+## 19. Find the overlapping area of two rectangles Rectangles can be in any direction
+
+
+## Input:
+   A = 2      E = 4   left point
+   B = 2      F = 4   top point
+   C = 6      G = 8   right point
+   D = 6      H = 8   bottom point
+
+## Output :
+   ans= 4
+# testcases
+
+| Input | Output |
+| ------ | ------ |
+| two rectangles length | 4ss |
+
+## Development

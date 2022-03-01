@@ -2,12 +2,13 @@
 # 			Ex. S = “BCAHGBNAJKGTYUALKWG”
 # 			Output: 6
 
-S = "BCAHGBNAJAKGTYUALKWGG"
-count=0
-for i in S:
-    if i=='A':
-        count += 1
-    elif i=='G':
-        count += 1
+S = "BCAHGBNAJKGTYUALKWGG"
+# count=0
+# for i in S:
+#     if i=='A':
+#         count += 1
+#     elif i=='G':
+#         count += 1
 
-print(count)
+# print(count)
+counter=0
