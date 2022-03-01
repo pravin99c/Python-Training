@@ -2,14 +2,14 @@
 ## 1. Slice list into 3 equal chunks and reverse each chunk
 
 ## Input:
-    list1=[11, 45, 8, 23, 14, 12, 78, 45, 89]
+   creat list 
 ## Output :
-   [[8, 45, 11], [12, 14, 23], [89, 45, 78]]
+   3 value list creat and print reverse 
 # testcases
 
 | Input | Output |
 | ------ | ------ |
-| list1 | True |
+| [11,45,8,23,14,12,78,45,89] | [[8, 45, 11], [12, 14, 23], [89, 45, 78]] |
 
 ## Development
 
@@ -18,56 +18,55 @@
 ## 2. Count the occurrence of each element from a list
 
 ## Input:
-    a=[11, 45, 8, 11, 23, 45, 23, 45, 89]
+   creat new list 
 ## Output :
-    a={11: 2, 45: 3, 8: 1, 23: 2, 89: 1}
+   occurrence of element key and count key than value
 # testcases
 
 | Input | Output |
 | ------ | ------ |
-| list| set |
+| [11, 45, 8, 11, 23, 45, 23, 45, 89]| {11: 2, 45: 3, 8: 1, 23: 2, 89: 1} |
 
 ## 3.Write a Python program to get a list, sorted in increasing order by the last element in each tuple from a given list of non-empty tuples.
 
 ## Input:
-    list= [(2, 5), (1, 2), (4, 4), (2, 3), (2, 1)]
+   tuple
 
 ## Output :
-    list = [(2, 1), (1, 2), (2, 3), (4, 4), (2, 5)]
+   sorted in increasing order
 # testcases
 
 | Input | Output |
 | ------ | ------ |
-| list| sorted (tuple) |
+| [(2, 5), (1, 2), (4, 4), (2, 3), (2, 1)] | [(2, 1), (1, 2), (2, 3), (4, 4), (2, 5)] |
 
 
 
 ## 4.Find the intersection (common) of two sets and remove those elements from the first set.
 
 ## Input:
-    dict1= {23, 42, 65, 57, 78, 83, 29}
-    dict2= {57, 83, 29, 67, 73, 43, 48}
+   creat two sets 
 
 ## Output :
-    ans={57, 83, 29}, {65, 42, 78, 23}
+   remove those firat set and second sets in than remove value and print
 # testcases
 
 | Input | Output |
 | ------ | ------ |
-| dict | Common |
+| {23, 42, 65, 57, 78, 83, 29},{57, 83, 29, 67, 73, 43, 48} | {57, 83, 29}, {65, 42, 78, 23} |
 
 ## 5.Sort given array of three random elements. 0,1 & 2. Without any sorting algorithm. Time complexity: O(n)
 
 
 ## Input:
-   list=  [1,0,2,2,0,1,0,1,2,0,0]
+   list creat 0,1 and 2
 ## Output :
-   list = [0,0,0,0,0,1,1,1,2,2,2] 
+   sorting list (without using sorting fun) 
 # testcases
 
 | Input | Output |
 | ------ | ------ |
-| list | sorting list (without using sorting fun) |
+| [1,0,2,2,0,1,0,1,2,0,0] |  [0,0,0,0,0,1,1,1,2,2,2] |
 
 ## Development
 
@@ -78,14 +77,14 @@
 ## 6. Create a function to reverse the entire list without any function and also do not use any indexing or slicing shortcut. Time Complexity O(logn)
 
 ## Input:
-    list=[1,2,3,4,5,6,7,8,9]
+   creat a function and list 
 ## Output :
-   list=[9, 8, 7, 6, 5, 4, 3, 2, 1]
+   entire list
 # testcases
 
 | Input | Output |
 | ------ | ------ |
-| list1 | True |
+| [1,2,3,4,5,6,7,8,9] | [9, 8, 7, 6, 5, 4, 3, 2, 1] |
 
 ## Development
 
@@ -94,55 +93,55 @@
 ## 7. Convert any lower case string to upper case without in-built python functions.
 
 ## Input:
-    A = "abcdef ghi"
+   string
 ## Output :
-    A= ABCDEF GHI
+   string uppercase
 # testcases
 
 | Input | Output |
 | ------ | ------ |
-| String | Uppercase |
+| "abcdef ghi" | ABCDEF GHI |
 
 ## 8. Return the sum of duplicates elements from the given List
 
 ## Input:
-   L = [3, 5, 6, 11, 12, 3, 5, 2]
+   creat duplicates value list
 
 ## Output :
-    sum=L = 8
+   sum of duplicates value
 # testcases
 
 | Input | Output |
 | ------ | ------ |
-| list| 3+5=8 |
+| [3, 5, 6, 11, 12, 3, 5, 2] | 3+5=8 |
 
 
 
 ## 9. Count the subsequence “AG” in the given string.
 
 ## Input:
-    S = "BCAHGBNAJAKGTYUALKWGG"
+   string creat
 
 ## Output :
-    ans=8
+   find AG
 # testcases
 
 | Input | Output |
 | ------ | ------ |
-| string | True |
+| "BCAHGBNAJAKGTYUALKWGG" | 8 |
 
 ## 10. Find the max sum of sub array
 
 
 ## Input:
-   L = [6, 3, -2, -1, -4, -2, -3, 7, 9, 8]
+   creat list
 ## Output :
-   ans=24
+   sum of sub array
 # testcases
 
 | Input | Output |
 | ------ | ------ |
-| list | sum max sub value |
+| [6, 3, -2, -1, -4, -2, -3, 7, 9, 8] | 24 |
 
 ## Development
 
@@ -150,14 +149,14 @@
 
 
 ## Input:
-   L =  [7, 5,  2, 3, 12, 9, 15, 24]
+   creat list
 ## Output :
-   ans= 72
+   maximum even numer + minimum odd number
 # testcases
 
 | Input | Output |
 | ------ | ------ |
-| list | maximum even numer + minimum odd number |
+| [7, 5,  2, 3, 12, 9, 15, 24] | 72 |
 
 ## Development
 
