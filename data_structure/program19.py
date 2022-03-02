@@ -40,9 +40,9 @@ def overlappingArea(l1, r1, l2, r2):
     return areaI
  
 # Driver's Code
-l1 = [0, 0]
-r1 = [2, 2]
-l2 = [1.5, -1]
-r2 = [3, 3]
+l1 = [2, 3]
+r1 = [4, 1]
+l2 = [3, 7]
+r2 = [6, 2]
 
 print(overlappingArea(l1, r1, l2, r2))

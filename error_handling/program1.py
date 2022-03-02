@@ -25,7 +25,7 @@ while True:
             except ValueError:
                 raise FormulaError
     except FormulaError:
-        print("Try again next time")
+        print("Sorry, Try again ")
 
             
         
