@@ -15,83 +15,224 @@
 
 
 # from os import remove
-from multiprocessing import Manager
+
 import random
 
 
+
 class Users():
-    def __init__(self,username,mobile_no,address, opening_balance):
+    def __init__(self,username,mobile_no,address, balance,account_no):
         self.username=username
         self.mobile_no=mobile_no
         self.address=address
-        self.account_no = random.randrange(1,999999999999)
-        self.balance = opening_balance
-    def __str__(self):
-        return f'{self.username}\n{self.mobile_no}\n{self.address}\n{self.account_no}\nBalance: ${self.balance:.2f}\n'
-class User_manager(Users):
-    def __init__(self):
+        self.account_no = account_no
+        self.balance = balance
+    # def __str__(self):
+    #     return f'{self.account_no}\nBalance: ${self.balance:.2f}\n'
+class Manager():
+    def __init__(self):   
         self.users_list = []
-        print(self.users_list)
-
-# class ATM(User_manager):
-#     print(hello)
+    def get_existing_user(self):
+        if len(self.users_list) == 0:
+            print('Accounts not found')
+        else:
+            for user in self.users_list:
+                print('Ac. No.:{0} \n Account balance:{1} '.format(user.account_no,user.balance))
     
-def main():
-    customer_list=[]
-    while True:
-        print("1 = Creating New Account ")
-        print("2 = View Balance ")
-        print("3 = Deposit ")
-        print("4 = Withdraw ")
-        print("5 = Close Account ")
-        print("6 = exit")
-        select1=int(input("select your choice : "))
 
-        if select1 == 1:
+class ATM():
+    def check_account(users_list,Account_no):
+        for user in users_list:
+            if user.account_no == Account_no:
+                return user
+        return False
+
+Managers=Manager()
+
+def main():
+    customer_list=0
+    print(customer_list)
+    Managers=Manager()
+    print(" Welecome to Bank Of Broda ")
+    while True:
+        print("1 = Banking ")
+        print("2 = exit")
+        select1=int(input("select your choice : "))
+        if select1 not in (1, 2):
+            print('Plsease select the valid option')
+            continue
+        elif select1 == 1:
+            print("Welcome to Banking")
             while True:
-                try:
-                    user_name=input("Enter user name : ")
-                    mobile_no=int(input("Enter mobile number in digit :"))
-                    address=input("Enter user Address :")
-                    opening_balance=int(input("Enter opening balance"))
-                    user_ditails=Users(user_name,mobile_no,address,opening_balance)
-                    Managers=User_manager
-                    Managers.no_of_users.append(user_ditails)
-                except Exception as e:
-                    print(e)
-                    print("Enter digit number 10")
-                else:
+                option = int(input('\nHow Can We Assist you\tPlease enter your options:\n 1: Open a new Account\n 2: Deposit money and Withdraw money and remove account in your account\n 3: Exit the Bank\n Plase Enter : '))
+                if option not in (1, 2, 3):
+                        print('Please select the valid option')
+                        continue
+                if option == 1:#Open a new Account
+                    try:
+                        user_name=input("Enter user name : ")
+                        mobile_no=int(input("Enter mobile number in digit : "))
+                        address=input("Enter user Address : ")
+                        account_no = random.randrange(1,999999999999)
+                        while True:
+                            balance=int(input("Enter opening balance : "))
+                            if balance < 10000:
+                                print("Please enter minimum amount is 10000 ")
+                            else:
+                                break
+                        user_ditails=Users(user_name,mobile_no,address,balance,account_no)
+                        Managers.users_list.append(user_ditails)
+                        customer_list += 1
+                        print('Ac. No.:{0} \n Account balance:{1} '.format(account_no,balance))
+                    except Exception as e:
+                        print(e)
+                        continue
+                elif option == 2:#Deposit money in your account
+                    Account_no = int(input('Enter account no: '))
+                    user_obj = ATM.check_account(Managers.users_list,Account_no)
+                    if user_obj:
+                        while True:
+                            add_option = int(input('\nHow Can We Assist you\tPlease enter your options:\n 1: Deposit money in your account \n 2: Withdraw Amount\n 3: Remove Account \n 4: Exit the Bank\n Plase Enter : '))
+                            if add_option not in (1, 2, 3, 4):
+                                    print('Please select the valid option')
+                                    continue
+                            if add_option == 1:
+                                get_amount = int(input('Enter amount: '))
+                                user_obj.balance = int(user_obj.balance) + get_amount     
+                                print('Now your current balance is',user_obj.balance)
+                            elif add_option == 2:
+                                get_amount = int(input('Enter amount: '))
+                                if int(user_obj.balance) - get_amount >= 0:
+                                    user_obj.balance = int(user_obj.balance) - get_amount - 0.5  
+                                    print('Now your current balance is',user_obj.balance)
+                                else:
+                                    print('Please try agian! Your current balance is {0}'.format(user_obj.balance))
+                            elif add_option == 3:
+                                Managers.users_list.remove(user_obj)
+                                break
+                            elif add_option == 4:
+                                break
+                elif option == 3:
                     break
         elif select1 == 2:
-            try:
-                account_no=Users.account_no
-                print(account_no)
-                Account_no=input("Enter Account Number : ")
-                if Account_no==account_no:
-                    print("hello")
-            except Exception as e:
-                print(e)
-            else:
-                break
-        elif select1 == 3:
-            try:
-                user_name=input("Enter user name : ")
-                mobile_no=int(input("Enter mobile number in digit"))
-            except Exception as e:
-                print(e)
-            else:
-                break
-        elif select1 == 4:
-            try:
-                user_name=input("Enter user name : ")
-                mobile_no=int(input("Enter mobile number in digit"))
-            except Exception as e:
-                print(e)
-            else:
-                break
-        elif select1 == 5:
-            print("hello5")
-        elif select1 == 6:
             break
-
 main()
+
+
+
+# # from os import remove
+# from ast import While
+# from multiprocessing import Manager
+# import random
+
+
+# class Users():
+#     def __init__(self,username,mobile_no,address, opening_balance):
+#         self.username=username
+#         self.mobile_no=mobile_no
+#         self.address=address
+#         self.account_no = random.randrange(1,999999999999)
+#         self.balance = opening_balance
+#         print(self.account_no)
+#     def __str__(self):
+#         return f'{self.username}\n{self.mobile_no}\n{self.address}\n{self.account_no}\nBalance: ${self.balance:.2f}\n'
+# class User_manager(Users):
+#     def __init__(self):
+#         self.users_list = []
+#         print("Succussfully creat account ")
+    
+
+# # class ATM(User_manager):
+# #     print(hello)
+
+
+# def main():
+#     customer_list=[]
+#     Managers=User_manager()
+#     while True:
+#         print("1 = Creating New Account ")
+#         print("2 = View Balance ")
+#         print("3 = Deposit ")
+#         print("4 = Withdraw ")
+#         print("5 = Close Account ")
+#         print("6 = exit")
+#         select1=int(input("select your choice : "))
+
+#         if select1 == 1:#Creating New Account
+#             while True:
+#                 try:
+#                     print(" Welecome to Bank Of Broda ")
+#                     user_name=input("Enter user name : ")
+#                     mobile_no=int(input("Enter mobile number in digit : "))
+#                     address=input("Enter user Address : ")
+#                     while True:
+#                         balance=int(input("Enter opening balance : "))
+#                         if balance >= 10000:
+#                             opening_balance=balance
+#                             break
+#                         else:
+#                             print("Please enter minimum amount is 10000 ")
+
+#                     user_ditails=Users(user_name,mobile_no,address,opening_balance)
+#                     Managers.users_list.append(user_ditails)
+#                 except :
+#                    raise
+#                 else:
+#                     break
+#         elif select1 == 2:#View Balance
+#             try:
+#                 print(" Welecome to Bank Of Broda ")
+#                 while True:
+#                     Account_no=int(input("Enter Account Number : "))
+#                     list_users=Managers.users_list
+#                     print()
+#                     for user in list_users:
+#                         print(user.account_no)
+#                         if Account_no == user.account_no:
+#                             print("Balance is : ",user.balance)
+#                             break
+#                         else:
+#                             print("Not Exit Your Account Number ")
+#                     break   
+#             except Exception as e:
+#                 print(e)
+#         elif select1 == 3:#Deposit
+#             try:
+#                 while True:
+#                     Account_no=int(input("Enter Account Number : "))
+#                     Balance=int(input("Enter Your Deposit Amount : "))
+#                     list_users=Managers.users_list
+#                     print()
+#                     for user in list_users:
+#                         if Account_no == user.account_no:
+#                             # print("Balance is : ",user.balance)
+#                             user.balance += Balance
+#                             print(user.balance)
+#                         else:
+#                             print("Not Exit Your Account Number ")
+#                     break 
+#             except Exception as e:
+#                 print(e)
+#         elif select1 == 4:#Withdraw
+#             try:
+#                while True:
+#                     Account_no=int(input("Enter Account Number : "))
+#                     W_Balance=int(input("Enter Your Withdraw Amount : "))
+#                     list_users=Managers.users_list
+#                     print()
+#                     for user in list_users:
+#                         if Account_no == user.account_no:
+#                             # print("Balance is : ",user.balance)
+#                             user.balance -= W_Balance -0.5
+#                             print(user.balance)
+#                         else:
+#                             print("Not Exit Your Account Number ")
+#                     break 
+#             except Exception as e:
+#                 print(e)
+#         elif select1 == 5:#Close Account
+#             print("hello5")
+#         elif select1 == 6:#exit
+#             break
+
+# main()
