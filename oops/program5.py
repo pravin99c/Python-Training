@@ -1,6 +1,6 @@
 # Program: 5
 # Create class Person:
-# Name,DOB,City,Contact No
+# name,DOB,city,Contact No
 # Create class Employee (Inherit person class)
 # employee id,joining date,salary,department,post
 # Employee manager class
@@ -21,103 +21,103 @@ import datetime,random,time
 
 
 class Person():
-    def __init__(self,Name,DOB,City,Contact_no):
-        self.Name=Name
+    def __init__(self,name,DOB,city,contact_no):
+        self.name=name
         self.DOB=DOB
-        self.City=City
-        self.Contact_no=Contact_no
+        self.city=city
+        self.contact_no=contact_no
 
 class Employee(Person):
-    def __init__(self,Name,DOB,City,Contact_no,Emploayer_id,Joining_date,Salary,Department,Post):
-        self.Emploayer_id=Emploayer_id
-        self.Joining_date=Joining_date
-        self.Salary=Salary
-        self.Department=Department
-        self.Post=Post
-        super().__init__(Name,DOB,City,Contact_no)        
+    def __init__(self,name,DOB,city,contact_no,emploayer_id,joining_date,salary,department,post):
+        self.emploayer_id=emploayer_id
+        self.joining_date=joining_date
+        self.salary=salary
+        self.department=department
+        self.post=post
+        super().__init__(name,DOB,city,contact_no)        
 class Manager():
     def __init__(self):
         self.employee_list=[]
     def remove_emp(self,id):
         if len(self.employee_list) == 0:
-            print("Employee Name  not found")
+            print(" Employee name  not found")
         else:
             for i in self.employee_list:
-                if id == i.Emploayer_id:
+                if id == i.emploayer_id:
                     self.employee_list.remove(i)
-    def Show_all_Employee(self):
+    def show_all_employee(self):
         if len(self.employee_list) == 0:
-            print("Employee Name  not found")
+            print(" Employee name  not found")
         else:
             count=1
             for i in self.employee_list:
-                print("Employer Number : ",count)
-                print(' List of Employers : {0} \n Name : {1} \n DOB : {2} \n City : {3} \n contact : {4} \n id : {5} \n joining : {6} \n salary : {7} \n department : {8} \n post : {9}'.format(count,i.Name,i.DOB,i.City,i.Contact_no,i.Emploayer_id,i.Joining_date,i.Salary,i.Department,i.Post))
+                print(" Employer Number : ",count)
+                print(' List of Employers : {0} \n name : {1} \n DOB : {2} \n city : {3} \n contact : {4} \n id : {5} \n joining : {6} \n salary : {7} \n department : {8} \n post : {9}'.format(count,i.name,i.DOB,i.city,i.contact_no,i.emploayer_id,i.joining_date,i.salary,i.department,i.post))
                 count += 1
     def choices(self,choice):
         if len(self.employee_list) == 0:
-            print("Employee Name  not found")
+            print(" Employee name  not found")
         else:
             for i in self.employee_list:
-                if choice == i.Name or choice == i.DOB or choice == i.Department or choice == i.City or int(choice) == i.Emploayer_id or choice == i.Post or int(choice) == i.Contact_no or choice == i.Joining_date:
-                    print('\n Name : {0} \n DOB : {1} \n City : {2} \n contact : {3} \n id : {4} \n ioining : {5} \n salary : {6} \n department : {7} \n post : {8}'.format(i.Name,i.DOB,i.City,i.Contact_no,i.Emploayer_id,i.Joining_date,i.Salary,i.Department,i.Post))
-    def Find_current_year(self):
+                if choice == i.name or choice == i.DOB or choice == i.department or choice == i.city or int(choice) == i.emploayer_id or choice == i.post or int(choice) == i.contact_no or choice == i.joining_date:
+                    print('\n name : {0} \n DOB : {1} \n city : {2} \n contact : {3} \n id : {4} \n ioining : {5} \n salary : {6} \n department : {7} \n post : {8}'.format(i.name,i.DOB,i.city,i.contact_no,i.emploayer_id,i.joining_date,i.salary,i.department,i.post))
+    def find_current_year(self):
         CurrentDate=datetime.date.today()  
         if len(self.employee_list) == 0:
-            print("Employee Name  not found")
+            print(" Employee name  not found")
         else:
-            day,mount,year = (self.Joining_date).split("/")
+            day,mount,year = (self.joining_date).split("/")
             print(day)
             for i in self.employee_list:
                 if int(year)==CurrentDate.year:
-                    print('\n Name : {0} \n DOB : {1} \n City : {2} \n contact : {3} \n id : {4} \n joining : {5} \n salary : {6} \n department : {7} \n post : {8}'.format(i.Name,i.DOB,i.City,i.Contact_no,i.Emploayer_id,i.Joining_date,i.Salary,i.Department,i.Post))
-    def Find_current_month(self):
+                    print('\n name : {0} \n DOB : {1} \n city : {2} \n contact : {3} \n id : {4} \n joining : {5} \n salary : {6} \n department : {7} \n post : {8}'.format(i.name,i.DOB,i.city,i.contact_no,i.emploayer_id,i.joining_date,i.salary,i.department,i.post))
+    def find_current_month(self):
         CurrentDate=datetime.date.today()  
         if len(self.employee_list) == 0:
-            print("Employee Name  not found")
+            print(" Employee name  not found")
         else:
-            day,month,year = (self.Joining_date).split("/")
+            day,month,year = (self.joining_date).split("/")
             for i in self.employee_list:
                 if int(month)==CurrentDate.month:
-                    print('\n Name : {0} \n DOB : {1} \n City : {2} \n contact : {3} \n id : {4} \n joining : {5} \n salary : {6} \n department : {7} \n post : {8}'.format(i.Name,i.DOB,i.City,i.Contact_no,i.Emploayer_id,i.Joining_date,i.Salary,i.Department,i.Post))
-    def Find_current_day(self):
+                    print('\n name : {0} \n DOB : {1} \n city : {2} \n contact : {3} \n id : {4} \n joining : {5} \n salary : {6} \n department : {7} \n post : {8}'.format(i.name,i.DOB,i.city,i.contact_no,i.emploayer_id,i.joining_date,i.salary,i.department,i.post))
+    def find_current_day(self):
         CurrentDate=datetime.date.today()  
         if len(self.employee_list) == 0:
-            print("Employee Name  not found")
+            print(" Employee name  not found")
         else:
-            day,month,year = (self.Joining_date).split("/")
+            day,month,year = (self.joining_date).split("/")
             for i in self.employee_list:
                 if int(day)==CurrentDate.day:
-                    print('\n Name : {0} \n DOB : {1} \n City : {2} \n contact : {3} \n id : {4} \n joining : {5} \n salary : {6} \n department : {7} \n post : {8}'.format(i.Name,i.DOB,i.City,i.Contact_no,i.Emploayer_id,i.Joining_date,i.Salary,i.Department,i.Post))
+                    print('\n name : {0} \n DOB : {1} \n city : {2} \n contact : {3} \n id : {4} \n joining : {5} \n salary : {6} \n department : {7} \n post : {8}'.format(i.name,i.DOB,i.city,i.contact_no,i.emploayer_id,i.joining_date,i.salary,i.department,i.post))
                             
-    def Find_salary_geraterthan(self):
+    def find_salary_geraterthan(self):
         if len(self.employee_list) == 0:
-            print("Employee Name  not found")
+            print(" Employee name  not found")
         else:
             for i in self.employee_list:
-                if i.Salary >= 50000:
-                    print('\n Name : {0} \n DOB : {1} \n City : {2} \n contact : {3} \n id : {4} \n ioining : {5} \n salary : {6} \n department : {7} \n post : {8}'.format(i.Name,i.DOB,i.City,i.Contact_no,i.Emploayer_id,i.Joining_date,i.Salary,i.Department,i.Post))
-    def Find_between_50000_100000(self):
+                if i.salary >= 50000:
+                    print('\n name : {0} \n DOB : {1} \n city : {2} \n contact : {3} \n id : {4} \n ioining : {5} \n salary : {6} \n department : {7} \n post : {8}'.format(i.name,i.DOB,i.city,i.contact_no,i.emploayer_id,i.joining_date,i.salary,i.department,i.post))
+    def find_between_50000_100000(self):
         if len(self.employee_list) == 0:
-            print("Employee Name  not found")
+            print(" Employee name  not found")
         else:
             for i in self.employee_list:
-                if i.Salary < 100000 and i.Salary > 50000:
-                    print('\n Name : {0} \n DOB : {1} \n City : {2} \n contact : {3} \n id : {4} \n ioining : {5} \n salary : {6} \n department : {7} \n post : {8}'.format(i.Name,i.DOB,i.City,i.Contact_no,i.Emploayer_id,i.Joining_date,i.Salary,i.Department,i.Post))
-    def Find_less_50000_and_gerater_100000(self):
+                if i.salary < 100000 and i.salary > 50000:
+                    print('\n name : {0} \n DOB : {1} \n city : {2} \n contact : {3} \n id : {4} \n ioining : {5} \n salary : {6} \n department : {7} \n post : {8}'.format(i.name,i.DOB,i.city,i.contact_no,i.emploayer_id,i.joining_date,i.salary,i.department,i.post))
+    def find_less_50000_and_gerater_100000(self):
         if len(self.employee_list) == 0:
-            print("Employee Name  not found")
+            print(" Employee name  not found")
         else:
             for i in self.employee_list:
-                if i.Salary > 100000 or i.Salary < 50000:
-                    print('\n Name : {0} \n DOB : {1} \n City : {2} \n contact : {3} \n id : {4} \n ioining : {5} \n salary : {6} \n department : {7} \n post : {8}'.format(i.Name,i.DOB,i.City,i.Contact_no,i.Emploayer_id,i.Joining_date,i.Salary,i.Department,i.Post))
-    def Find_sort_salary(self):
+                if i.salary > 100000 or i.salary < 50000:
+                    print('\n name : {0} \n DOB : {1} \n city : {2} \n contact : {3} \n id : {4} \n ioining : {5} \n salary : {6} \n department : {7} \n post : {8}'.format(i.name,i.DOB,i.city,i.contact_no,i.emploayer_id,i.joining_date,i.salary,i.department,i.post))
+    def find_sort_salary(self):
         if len(self.employee_list) == 0:
-            print("Employee Name  not found")
+            print(" Employee name  not found")
         else:
-            self.employee_list.sort(key = lambda x:x.Salary, reverse = True)
+            self.employee_list.sort(key = lambda x:x.salary, reverse = True)
             for i in self.employee_list:
-                print('\n Name : {0} \n DOB : {1} \n City : {2} \n contact : {3} \n id : {4} \n ioining : {5} \n salary : {6} \n department : {7} \n post : {8}'.format(i.Name,i.DOB,i.City,i.Contact_no,i.Emploayer_id,i.Joining_date,i.Salary,i.Department,i.Post))
+                print('\n name : {0} \n DOB : {1} \n city : {2} \n contact : {3} \n id : {4} \n ioining : {5} \n salary : {6} \n department : {7} \n post : {8}'.format(i.name,i.DOB,i.city,i.contact_no,i.emploayer_id,i.joining_date,i.salary,i.department,i.post))
 def main():
     print("************ Welcome ***************")
     details=Manager()
@@ -149,19 +149,19 @@ def main():
                             if option == 1:
                                 while True:
                                     try:
-                                        Name = input(" Enter your Person Name : ")
+                                        name = input(" Enter your Person name : ")
                                         DOB = input(" Enter your date of birth (d/m/y): ")
-                                        City = input(" Enter your City : ")
-                                        Contact_no=int(input(" Enter your mobile number : "))
-                                        Emploayer_id=random.randrange(1,10)
-                                        Joining_date=input(" Enter your joining date(d/m/y): ")
-                                        Salary=int(input(" Enter your salary for minimum 50000 : "))
-                                        Department=input(" Enter your department : ")
-                                        Post=input(" Enter your Post : ")
+                                        city = input(" Enter your city : ")
+                                        contact_no=int(input(" Enter your mobile number : "))
+                                        emploayer_id=random.randrange(1,10)
+                                        joining_date=input(" Enter your joining date(d/m/y): ")
+                                        salary=int(input(" Enter your salary for minimum 50000 : "))
+                                        department=input(" Enter your department : ")
+                                        post=input(" Enter your post : ")
                                     except Exception as e:
                                         print(" ",e)
                                     else:
-                                        employee=Employee(Name,DOB,City,Contact_no,Emploayer_id,Joining_date,Salary,Department,Post)
+                                        employee=Employee(name,DOB,city,contact_no,emploayer_id,joining_date,salary,department,post)
                                         details.employee_list.append(employee)
                                         break
                             elif option == 2:
@@ -178,7 +178,7 @@ def main():
                                 print('Plsease select the valid option')
                                 continue
                             if Show_employee == 1:
-                                details.Show_all_Employee()
+                                details.show_all_employee()
                                 time.sleep(0.5)
                             elif Show_employee == 2:
                                 choice=input(" Enter your choices : ")
@@ -195,36 +195,36 @@ def main():
                                 print('Plsease select the valid option')
                                 continue
                             if find_dat_time == 1:
-                                details.Find_current_year()
+                                details.find_current_year()
                                 time.sleep(0.5)
                             elif find_dat_time == 2:
-                                details.Find_current_month()
+                                details.find_current_month()
                                 time.sleep(0.5)
                             elif find_dat_time == 3:
-                                details.Find_current_day()
+                                details.find_current_day()
                                 time.sleep(0.5)
                             elif find_dat_time == 4:
                                 break
                     elif add_option == 4:#7 : Find salary greaterthan 50000 for Employee
-                        #  Enter 8 : Find salary between 50000 - 100000 for Employee \n Enter 10 : Sort Employer list with Salary in descending Order \n
+                        #  Enter 8 : Find salary between 50000 - 100000 for Employee \n Enter 10 : Sort Employer list with salary in descending Order \n
                         while True:
                             time.sleep(0.5)
                             print(" ************************************************* ")
-                            find_salary=int(input("\n Enter 1 : Find slary ggraterthan 50000 \n Enter 2 : Find salary between 50000 - 100000 for Employee \n Enter 3 : Find salary lessthan 50000 and greater than 100000 \n Enter 4 : Sort Employer list with Salary in descending Order \n Enter 5 : Exit \n Enter your Choice : "))
+                            find_salary=int(input("\n Enter 1 : Find slary ggraterthan 50000 \n Enter 2 : Find salary between 50000 - 100000 for Employee \n Enter 3 : Find salary lessthan 50000 and greater than 100000 \n Enter 4 : Sort Employer list with salary in descending Order \n Enter 5 : Exit \n Enter your Choice : "))
                             if find_salary not in (1,2,3,4,5):
                                 print('Plsease select the valid option')
                                 continue
                             if find_salary == 1:
-                                details.Find_salary_geraterthan()
+                                details.find_salary_geraterthan()
                                 time.sleep(0.5)
                             elif find_salary == 2:
-                                details.Find_between_50000_100000()
+                                details.find_between_50000_100000()
                                 time.sleep(0.5)
                             elif find_salary == 3:
-                                details.Find_less_50000_and_gerater_100000()
+                                details.find_less_50000_and_gerater_100000()
                                 time.sleep(0.5)
                             elif find_salary == 4:
-                                details.Find_sort_salary()
+                                details.find_sort_salary()
                                 time.sleep(5)
                             elif find_salary == 5:
                                 break
