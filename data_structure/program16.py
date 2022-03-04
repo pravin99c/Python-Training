@@ -17,6 +17,6 @@ ans=0
 sum = 1
 for i in range(len(A)):
     sum *= A[i] 
-    if (sum/A[i])==A[i]:
+    if (sum/A[i])==A[i] and (sum/A[i])!=1:
         ans=A[i]
 print(ans)
