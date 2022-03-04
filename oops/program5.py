@@ -49,25 +49,18 @@ class Manager():
         if len(self.employee_list) == 0:
             print("Employee Name  not found")
         else:
+            count=1
             for i in self.employee_list:
-                print(' List of Employers : {0} \n Name : {1} \n DOB : {2} \n City : {3} \n contact : {4} \n id : {5} \n joining : {6} \n salary : {7} \n department : {8} \n post : {9}'.format(len(self.employee_list),i.Name,i.DOB,i.City,i.Contact_no,i.Emploayer_id,i.Joining_date,i.Salary,i.Department,i.Post))
-    def Find_employer_name(self,name):
+                print("Employer Number : ",count)
+                print(' List of Employers : {0} \n Name : {1} \n DOB : {2} \n City : {3} \n contact : {4} \n id : {5} \n joining : {6} \n salary : {7} \n department : {8} \n post : {9}'.format(count,i.Name,i.DOB,i.City,i.Contact_no,i.Emploayer_id,i.Joining_date,i.Salary,i.Department,i.Post))
+                count += 1
+    def choices(self,choice):
         if len(self.employee_list) == 0:
             print("Employee Name  not found")
         else:
             for i in self.employee_list:
-                if name == i.Name:
+                if choice == i.Name or choice == i.DOB or choice == i.Department or choice == i.City or int(choice) == i.Emploayer_id or choice == i.Post or int(choice) == i.Contact_no or choice == i.Joining_date:
                     print('\n Name : {0} \n DOB : {1} \n City : {2} \n contact : {3} \n id : {4} \n ioining : {5} \n salary : {6} \n department : {7} \n post : {8}'.format(i.Name,i.DOB,i.City,i.Contact_no,i.Emploayer_id,i.Joining_date,i.Salary,i.Department,i.Post))
-                
-                    
-    def Find_department(self,department):
-        if len(self.employee_list) == 0:
-            print("Employee Name  not found")
-        else:
-            for i in self.employee_list:
-                if department == i.Department:
-                    print('\n Name : {0} \n DOB : {1} \n City : {2} \n contact : {3} \n id : {4} \n ioining : {5} \n salary : {6} \n department : {7} \n post : {8}'.format(i.Name,i.DOB,i.City,i.Contact_no,i.Emploayer_id,i.Joining_date,i.Salary,i.Department,i.Post))
-                
     def Find_current_year(self):
         CurrentDate=datetime.date.today()  
         if len(self.employee_list) == 0:
@@ -118,14 +111,6 @@ class Manager():
             for i in self.employee_list:
                 if i.Salary > 100000 and i.Salary < 50000:
                     print('\n Name : {0} \n DOB : {1} \n City : {2} \n contact : {3} \n id : {4} \n ioining : {5} \n salary : {6} \n department : {7} \n post : {8}'.format(i.Name,i.DOB,i.City,i.Contact_no,i.Emploayer_id,i.Joining_date,i.Salary,i.Department,i.Post))
-    
-    def Find_from_mirzapur(self,Places):
-        if len(self.employee_list) == 0:
-            print("Employee Name  not found")
-        else:
-            for i in self.employee_list:
-                if Places == i.City:
-                    print('\n Name : {0} \n DOB : {1} \n City : {2} \n contact : {3} \n id : {4} \n ioining : {5} \n salary : {6} \n department : {7} \n post : {8}'.format(i.Name,i.DOB,i.City,i.Contact_no,i.Emploayer_id,i.Joining_date,i.Salary,i.Department,i.Post))               
     def Find_sort_salary(self):
         if len(self.employee_list) == 0:
             print("Employee Name  not found")
@@ -187,26 +172,18 @@ def main():
                     elif add_option == 2:#2 : Show All Employee
                         while True:
                             time.sleep(1)
-                            Show_employee=int(input("\n Enter 1 : Show All Employee \n Enter 2 : Find name of Employee \n Enter 3 : Find department to Employee \n Enter 4 : Find Employer from mirzapur \n Enter 5 : Exit \n Plase Enter : "))
-                            if Show_employee not in (1,2,3,4,5):
+                            Show_employee=int(input("\n Enter 1 : Show All Employee \n Enter 2 : Show your Choice \n Enter 3 :  Exit \n Plase Enter : "))
+                            if Show_employee not in (1,2,3):
                                 print('Plsease select the valid option')
                                 continue
                             if Show_employee == 1:
                                 details.Show_all_Employee()
                                 time.sleep(2)
                             elif Show_employee == 2:
-                                name=input(" Enter your Name : ")
-                                details.Find_employer_name(name)
+                                choice=input(" Enter your choices : ")
+                                details.choices(choice)
                                 time.sleep(2)
-                            elif Show_employee == 3:#4 : Find department to Employee
-                                department=input(" Enter your department : ")
-                                details.Find_department(department)
-                                time.sleep(2)
-                            elif Show_employee == 4:#9 : Find Employer from mirzapur
-                                Places=input(" Enter your City : ")
-                                details.Find_from_mirzapur(Places)
-                                time.sleep(2)
-                            elif Show_employee == 5:
+                            elif Show_employee == 3:
                                 break
                     elif add_option == 3:#5 : Find current year To Employee
                         while True:
