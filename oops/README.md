@@ -10,13 +10,14 @@
 
    
 ## Output :
+    word and meaning
    
 # testcases
 
 | Input | Output |
 | ------ | ------ |
-| 1+5 | 6.0 |
-| 5-2 | 3.0 |
+| lol | lots of length|
+| lmk | let me know |
 ## Development
 
 
@@ -30,13 +31,14 @@
     -> Each class contains two methods to get a name and info. Get the name returns the name of that animal and get the info returns hierarchy.
 
 ## Output :
-   
+    dog.get_name()  ⇒ My name is Tommy
+    dog.get_info()  ⇒  I am Dog. I am Pet. I am Animal
 # testcases
 
 | Input | Output |
 | ------ | ------ |
-| ctrl+c | continue |
-| ctrl+x | continue |
+| add name | my name is ___ |
+| info | i am ___ . i am pet .I am Animal|
 
 ## Development
 
@@ -48,12 +50,56 @@
     -> Create two objects of the above class as players. Each player pick/remove 5 cards from the shuffle cards. Total points of both players and display name of winner player.
 
 ## Output :
-   not stop any keyboard key press
+   player 1 pick 5 cards
+   player 1 pick 5 cards
+   winner is max point
+
 # testcases
 
 | Input | Output |
 | ------ | ------ |
-| ctrl+c | continue |
-| ctrl+x | continue |
+| player 1 | 23 |
+| player 2 | 30 - winner |
+
+## Development
+
+## 4.Create a class for Users,
+
+## Input:
+   username account no mobile no address account balance -> Create a class for user manager Manages user => Add new user, Get existing user, remove user -> Create a class for ATM, Enter account no and get user if not found then show a valid message Show options for user operations like creating new users, View Balance. Deposit, Withdraw, Close account, etc... Transaction charge: 0.5 for every operation Account balance limit: 10000 
+
+## Output :
+   username,balance,close account,etc..
+# testcases
+
+| Input | Output |
+| ------ | ------ |
+| create user | print(user details) |
+| Atm function use | total balance ,etc.. |
+
+## Development
+
+## 5.Create class Person,Create class Employee (Inherit person class),Employee manager class
+
+## Input:
+   Name,DOB,City,Contact No ,employee id,joining date,salary,department,post,Add/Remove Employee, Get all employees list, get employee by his name, get all employees by his/her department,
+    Task:
+    Add few employees
+## Output :
+    Print all the employees
+    Find an employee with the name
+    Print all employees with department Finance
+    Find all employees whose salary is greater than 50000
+    Find all employees whose salary is bet ween 50000-100000
+    Find a list of employees who are joined in the current year
+    Find all employees who are from Mirzapur
+    Find employees whose birthday in the current month
+    Sort employee list with salary in descending order
+    importing datetime class  
+# testcases
+
+| Input | Output |
+| ------ | ------ |
+| user input | print(user details) |
 
 ## Development
