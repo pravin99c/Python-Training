@@ -69,7 +69,7 @@ class Manager():
             day,mount,year = (self.Joining_date).split("/")
             print(day)
             for i in self.employee_list:
-                if year==CurrentDate.year:
+                if int(year)==CurrentDate.year:
                     print('\n Name : {0} \n DOB : {1} \n City : {2} \n contact : {3} \n id : {4} \n joining : {5} \n salary : {6} \n department : {7} \n post : {8}'.format(i.Name,i.DOB,i.City,i.Contact_no,i.Emploayer_id,i.Joining_date,i.Salary,i.Department,i.Post))
     def Find_current_month(self):
         CurrentDate=datetime.date.today()  
