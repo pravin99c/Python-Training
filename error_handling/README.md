@@ -22,7 +22,7 @@ User input is assumed to be a formula that consists of a number, an operator (at
 
 
 
-## 19. Create while loop which increase counter by one every second.
+## 2. Create while loop which increase counter by one every second.
 
 ## Input:
     -> Start count from 0

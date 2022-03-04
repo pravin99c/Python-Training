@@ -9,7 +9,6 @@ def receiver(A):
     if len(A) == 0:
         return
     temp = A[0]
-    # print(temp,end="")
     receiver(A[1:])
     print(temp,end="")
     
