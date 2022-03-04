@@ -3,7 +3,7 @@
 # Ans = 50
 # A = [1, 2, 4, 8, 1]
 # Ans = 8
-A = [1, 5, 1, 10, 50]
+A = [1, 1, 4, 8, 2]
 ans=0
 # for i in range(len(A)):
 #     add=1
@@ -15,8 +15,15 @@ ans=0
 # print(ans)
 ans=0
 sum = 1
+# for i in range(len(A)):
+#     sum *= A[i]
+#     if (sum/A[i])==A[i]:
+#         ans=A[i]
+# print(ans)
+
+
 for i in range(len(A)):
-    sum *= A[i] 
-    if (sum/A[i])==A[i] and (sum/A[i])!=1:
-        ans=A[i]
-print(ans)
+    sum *= A[i]
+for i in A:
+    if sum/i==i:
+        print(i)
