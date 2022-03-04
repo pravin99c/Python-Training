@@ -5,11 +5,18 @@
 # Ans = 8
 A = [1, 5, 1, 10, 50]
 ans=0
+# for i in range(len(A)):
+#     add=1
+#     for j in range(len(A)):
+#         if j!=i:
+#             add = add*A[j]
+#     if A[i]==add:
+#         ans=add
+# print(ans)
+ans=0
+sum = 1
 for i in range(len(A)):
-    add=1
-    for j in range(len(A)):
-        if j!=i:
-            add = add*A[j]
-    if A[i]==add:
-        ans=add
+    sum *= A[i] 
+    if (sum/A[i])==A[i]:
+        ans=A[i]
 print(ans)
