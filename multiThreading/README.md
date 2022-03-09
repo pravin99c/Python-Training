@@ -2,7 +2,7 @@
 
 
 ## Input:
-    create single 
+    create single variable
 
 ## Output :
    single variable between two continuous loops
