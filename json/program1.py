@@ -19,3 +19,4 @@ with open('file.json','w') as file:
 
 with open('file.json','r') as file:
     x=json.load(file)
+print(type(x))

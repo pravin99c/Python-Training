@@ -141,7 +141,7 @@ def main():
                         print("************  Create your Account  ***************")
                         while True:
                             time.sleep(0.5)
-                            option=int(input("\n Enter 1 : Create person Account \n Enter 2 : Remove Employee \n Enter 3 : Exit \n Plase Enter : "))
+                            option=int(input("\n Enter 1 : Create Account \n Enter 2 : Remove Employee \n Enter 3 : Exit \n Plase Enter : "))
                             if option not in (1,2,3):
                                 print('Plsease select the valid option')
                                 continue

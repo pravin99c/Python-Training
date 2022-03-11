@@ -82,7 +82,7 @@ def main():
                                 break
                         user_ditails=Users(user_name,mobile_no,address,balance,account_no)
                         Managers.users_list.append(user_ditails)
-                        customer_list += 1
+                        customer_list = len(Managers.users_list)+1 
                         print('Ac. No.:{0} \n Account balance:{1} '.format(account_no,balance))
                     except Exception as e:
                         print(e)
