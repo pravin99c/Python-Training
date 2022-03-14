@@ -24,7 +24,7 @@ with zipfile.ZipFile('/home/woc/Pravin/Trainee/python_training/exam_python_first
     zip_ref.extractall(folder_zip_path)
 
 #_-----------------------------------------------
-# create out put folder
+# create output folder and create zip file to test.txt file
 
 try:
     folder_path = folder_zip_path + 'Output/'
@@ -50,6 +50,8 @@ read_file = open(path_folder)
 lines_list = read_file.read().splitlines()
 # print(lines_list)
 
+
+# create random world and write text.txt file to append random world or copy all text.txt file with new folder 
 s=10
 words_list = []
 for i in range(20): 
