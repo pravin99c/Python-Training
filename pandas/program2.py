@@ -22,13 +22,15 @@ input_date = str(input("Enter date and time from %m/%d/%y : "))
 
 ufo = data
 
+ufo['Date_time'] = ufo['Date_time'].str.replace("24:00","00:00")
 # convert 'datedocumented' datetime.
-ufo['date_documented'] = pd.to_datetime(ufo['date_documented'])
+ufo['Date_time'] = pd.to_datetime(ufo['Date_time']).dt.date
 
-# print(ufo['date_documented'])
+input_date = pd.to_datetime(input_date)
+# print(input_date)
 
-ufo_date = (ufo['date_documented']<input_date)
-
+ufo_date = (ufo['Date_time']< input_date)
+# print(ufo_date)
 # print all greaterthen date in cruuent date
 all_greaterthen_date = ufo.loc[ufo_date]
 print(all_greaterthen_date)
