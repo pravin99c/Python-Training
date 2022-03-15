@@ -88,3 +88,10 @@ nodeLanguageServer.*/**
 
 dist/**
 
+exam_python_first/Exam.zip
+
+exam_python_first/Output
+
+pandas/Automobile_data.csv
+
+pandas/ufo_sighting_data.csv
