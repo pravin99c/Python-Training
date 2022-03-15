@@ -16,9 +16,19 @@ now = pd.to_datetime(str(date.today()), format='%Y-%m-%d')
 print("Today's date: ",now)
 
 #  -----------------------------   2   ------------------------------------
+# input date for user
+input_date = str(input("Enter date and time from %m/%d/%y : "))
+# print(input_date)
 
-input_date = str(input("Enter date and time from %d/%m/%y : "))
-print(input_date)
+ufo = data
 
-# ufo = data[input_date]
-# print(all_data)
+# convert 'datedocumented' datetime.
+ufo['date_documented'] = pd.to_datetime(ufo['date_documented'])
+
+# print(ufo['date_documented'])
+
+ufo_date = (ufo['date_documented']>input_date)
+
+# print all greaterthen date in cruuent date
+all_greaterthen_date = ufo.loc[ufo_date]
+print(all_greaterthen_date)
