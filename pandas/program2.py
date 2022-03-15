@@ -32,3 +32,4 @@ ufo_date = (ufo['date_documented']>input_date)
 # print all greaterthen date in cruuent date
 all_greaterthen_date = ufo.loc[ufo_date]
 print(all_greaterthen_date)
+print(len(all_greaterthen_date))
