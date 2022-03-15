@@ -27,7 +27,7 @@ ufo['date_documented'] = pd.to_datetime(ufo['date_documented'])
 
 # print(ufo['date_documented'])
 
-ufo_date = (ufo['date_documented']>input_date)
+ufo_date = (ufo['date_documented']<input_date)
 
 # print all greaterthen date in cruuent date
 all_greaterthen_date = ufo.loc[ufo_date]
