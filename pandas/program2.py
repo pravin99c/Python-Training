@@ -21,19 +21,19 @@ input_date = str(input("Enter date and time from %m/%d/%y : "))
 print(input_date)
 
 
-ufo = data
+ufo_all_data = data
 
-ufo['Date_time'] = ufo['Date_time'].str.replace("24:00","00:00")
+ufo_all_data['Date_time'] = ufo_all_data['Date_time'].str.replace("24:00","00:00")
 
 # convert 'datedocumented' datetime.
-ufo['Date_time'] = pd.to_datetime(ufo['Date_time']).dt.date
+ufo_all_data['Date_time'] = pd.to_datetime(ufo_all_data['Date_time']).dt.date
 
 input_date = pd.to_datetime(input_date)
 
-ufo_date = (ufo['Date_time']< input_date)
+ufo_date = (ufo_all_data['Date_time']< input_date)
 
 
 # print all greaterthen date in cruuent date
-all_greaterthen_date = ufo.loc[ufo_date]
+all_greaterthen_date = ufo_all_data.loc[ufo_date]
 print(all_greaterthen_date)
 print(len(all_greaterthen_date))
