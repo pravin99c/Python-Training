@@ -1,9 +1,9 @@
 # 2. Check if the given number is prime or not
 
-num = int(input("Enter number : "))
-for i in range(2,(num//2)):
-    if num%i==0:
-        print(num,"Not a prime number")
+input_number = int(input("Enter number : "))
+for i in range(2,(input_number//2)):
+    if input_number%i==0:
+        print(input_number,"Not a prime number")
         break
 else:
-    print(num,"prime number")
+    print(input_number,"prime number")
